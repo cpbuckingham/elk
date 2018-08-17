@@ -165,6 +165,7 @@ ADD ./kibana.yml ${KIBANA_HOME}/config/kibana.yml
 
 FROM docker.elastic.co/apm/apm-server:6.3.2
 COPY apm-server.yml /usr/share/apm-server/apm-server.yml
+USER root
 RUN chown apm-server /usr/share/apm-server/apm-server.yml
 USER apm-server
 
